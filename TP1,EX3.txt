@@ -1,0 +1,23 @@
+package EX1;
+import java.util.Scanner;
+public class ex3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc = new Scanner(System.in);
+int secret=(int)((10-1)*Math.random()+1);
+System.out.println("donner un nombre entre 1 et 10");
+int print=sc.nextInt();
+while(print!=secret) {if(print<secret) {
+	System.out.println("entre un nombre plus grand");
+	print=sc.nextInt();
+	
+}
+else { System.out.println("penser a utiliser un nombre plus petit");
+print=sc.nextInt();
+
+}
+	}
+System.out.println("Congrats!! vous avez gagner");
+	}
+}

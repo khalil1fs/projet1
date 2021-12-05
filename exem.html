@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title> Mon site web avec Javascript</title>
+    <link rel="icon" type="image/png" href="1605875930127.png">.
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        // We also have comment in JS
+        document.write("<h1><i>Hello !</i></h1>");
+        console.log("<i>Fuck off</i>");
+        var isTrue = true;
+        var isFalse = false;
+        /* The Boolean value of 0(zero), null, undefined, empty string is false.
+        Everything with a "real" value is true.*/
+        var say = 'Hello \' World ';
+        var x = 10777.9;
+        var y = "My name is Khalil";
+        // 2 + 5 === 5 * 2; are strict equal
+        document.write(x);
+        document.write("<br>" + y);
+        //alert("this is an Alert, it's so cool");
+        //alert("this is second alert");
+        // var user = prompt("please Enter your name");
+        //alert(user);
+        var result = confirm("do you really want to leave this page");
+        if (result == true) {
+            alert("Thanks for visiting us");
+        } else {
+            alert("thanks for staying :)");
+        }
+        document.write("<br>" + say);
+        /*
+
+        function main() {
+            var distance = parseInt(readLine(), 10);
+            vartime = distance / 40;
+            time = time * 60;
+            console.log(time);
+        }
+        */
+        //methodName = function(){ code lines }
+        //objectName.methodName()
+        //A method is a function, belonging to an object. It can be referenced using the this keyword.
+        /*
+        function person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.changeName = function(name) {
+                this.name = name;
+            }
+        }
+        var p = new person("David", 21);
+        p.changeName("khalil");
+        */
+        // var course = new Array("HTML", "css", "JS");
+        /*
+    function myAlert() {
+    alert("Hi");
+                        }
+    setInterval(myAlert, 3000); // it will call the function every 3sec
+        */
+        //var d = new Date();
+        //new Date(year, month, day, hour, minute, second)
+        // var date = new Date();
+        // alert(date.getMinutes());
+        //finds element by id
+
+        document.getElementById(id)
+
+
+
+        //finds elements by class name
+
+        document.getElementsByClassName(name)
+
+
+
+        //finds elements by tag name
+
+        document.getElementsByTagName(name)
+
+        var elem = document.getElementById("demo");
+
+        elem.innerHTML = "Hello World!";
+    </script>
+</body>
+
+</html>

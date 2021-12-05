@@ -1,0 +1,79 @@
+{% comment %} 
+
+* La méthode equals() de la classe String renvoie une valeur booléenne true si les deux chaînes sont égales et false si elles sont inégales.
+*
+(a + = b) qui implique (a = a + b)
+=> a = ‘bob’
+=> y = 5
+a = ‘bob’ + 5 (5 est concaténé avec la chaîne bob)
+
+*StringBuffer est mutable ce qui signifie qu’on peut changer la valeur de l’objet.
+
+* La classe StringBuffer fournit la méthode append() pour concaténer une chaîne à la fin d’une autre chaîne. 
+
+* La méthode indexOf() renvoie la valeur de l’index s’il est présent. Sinon, il renvoie -1; 
+
+*   StringBuffer s = new StringBuffer("Bob");
+
+*La classe String se trouve dans le package java.lang.
+
+*L’opérateur « new » alloue dynamiquement de la mémoire pour un objet et renvoie une référence à celui-ci.
+ Cette référence est l’adresse en mémoire de l’objet alloué par « new ».
+
+JDK est le composant principal de l’environnent Java et il fournit tous les outils,
+ les exécutables et les binaires requis pour compiler, déboguer et exécuter un programme Java.
+
+ La JVM est responsable de la conversion du byte-codes en code spécifique à la machine.
+La JVM dépend également de la plateforme et fournit des fonctions Java de base telles que le « Garbage Collector »,
+la gestion de la mémoire, la sécurité, etc.
+
+ JRE est l’implémentation de JVM, et il fournit une plate-forme pour exécuter des programmes Java.
+
+ int tab[ ] = int [] new
+
+int tab[4] = new int [4];
+//ou 
+int tab[] = {0, 1, 2, 3, 4};
+
+int tab[] = new int [4];
+System.out.print(tab);
+Affiche l’adresse de la première case de « tab » soit 0025ff1A 
+
+1. Combien d’octets sont utilisés pour représenter le type int en Java : 4 
+
+
+
+/* Reseau */
+
+UDP(User Datagram Protocol) est utilisé au niveau de la couche transport pour fournir un service sans connexion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {% endcomment %}

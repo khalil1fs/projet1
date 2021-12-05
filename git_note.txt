@@ -1,0 +1,35 @@
+git clone "your_github repository" : to download your projet from github  
+git status : to now the progress of your project.
+git add <filename> : to add branch .
+git add * 
+git reseat head aymen.txt : to cancel the file you aded.
+git commit -m "the change you did" 
+git branch : tel you how many branch you have & give you (branch name)
+git remote -v : give you the remote name.
+git puch (remote name) (branch name) : download your new projet to github.
+git pull <branch name> : get download the last version of the projet.
+git config -l : show git configuration.
+git help config 
+git config --global user.email "Aboulouanek@gmail.com"
+git config -l --show-origin : show the racine folder.
+git config --global --edit : to edit the configuration by vim/nano/emacs.
+ssh-keygen -t rsa -b 4096 -C "Aboulouanek@gmail.com" : to protect the acces by key.
+ssh -T git@github.com : to connect
+git init : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

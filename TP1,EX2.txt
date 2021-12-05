@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class hello {
+	public static void main(String[] args) {
+		float [] arr;
+		float sum=0;
+		int i,j;
+		arr = new float[5];
+		Scanner sc = new Scanner(System.in);
+		for(i=0;i<arr.length;i++) {
+			System.out.println("put the value number "+ i + "in your array");
+			arr[i]=sc.nextFloat();
+			sum+=arr[i];
+		}
+		System.out.println("the average : "+ sum/arr.length);
+		int c;
+		float bigger=0;
+		for(i=0;i<arr.length;i++) {
+			c=0;
+			for(j=0;j<arr.length;j++) {
+				if(arr[i]>=arr[j])
+					c++;
+			}
+			if(c==arr.length) {
+				bigger=arr[i];
+			}
+		}
+		System.out.println("the biggest value in the array is : " + bigger);
+		float smaller=0;
+		for(i=0;i<arr.length;i++) {
+			c=0;
+			for(j=0;j<arr.length;j++) {
+				if(arr[i]<=arr[j])
+					c++;
+			}
+			if(c==arr.length) {
+				smaller=arr[i];
+			}
+		}
+		System.out.println("the smallest value in the array is : " + smaller);
+	}
+}

@@ -1,0 +1,82 @@
+/// Change the src attribute for an image
+<img ig="myimg" src="orange.png" alt="" />
+<script>
+var el = document.getElementById("myimg");
+el.src = "apple.png";
+</script>
+
+/// change the href attributr for an image
+<a href="http://www.example.com"> Some Link </a>
+<script> 
+var el = document.getElementByTagName("a");
+el[0].href = "http://www.Sololearn.com";
+</script> 
+
+ /// change the style element of the document
+ <div id="demo" style="width:200px"> Some Text </div>
+ <script>
+ var x = document.getElementById("demo");
+ x.style.color = "6600FF";
+ x.style.width = "100px";
+ </script>
+
+ // element.cloneNode() : clones an element and return the resulting node.
+ // document.createElement(element) creates a new element node .
+ // document.createTextNode(text) creates a new text node
+example:
+    var node = document.createTextNode("Some new text ");
+
+// To remove an HTML element, you must select the parent of the element and use the removeChild(node) method. 
+<div id="demo">
+    <p id="p1"> This is a paragraph. </p>
+    <p id="p2"> This another paragraph. </p>
+</div>
+<script> 
+    var parent = document.getElementById("demo");
+    var child = document.getElementById("p1");
+    parent.removeChild(child);
+</script>
+// This removes the paragraph with id="p1" from the page. 
+
+
+//To replace an HTML element, the element.replaceChild(newNode, oldNode) method is used. 
+<div id="demo">
+    <p id="p1">This is the paragraph </p>
+    <p id="p2">This is the paragraph 2 </p>
+</div>
+<script>
+    var p = document.createElement("p");
+    var node = document.createTextNode("This is new");
+    p.appendChild(node);
+    var parent = document.getElementById("demo");
+    var child = document.getElementById("p1");
+    parent.replaceChild(p, child);
+</script>
+//The code above creates a new paragraph element that replaces the existing p1 paragraph.
+
+
+// Let's display an alert popup when the user clicks a specified button: 
+<button onclick="show()"> Click me </button>
+<script> 
+    function show() {
+        alert("Hi there");
+    }
+</script>
+
+<body onload="doSomething()">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

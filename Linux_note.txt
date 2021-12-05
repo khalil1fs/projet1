@@ -1,0 +1,242 @@
+                                            Linux:
+shell : interpreteur de commandes + intermediaire entre l'utilisateur et le system d'exploitation.
++ les commandes permettant de piloter tous les aspets du system : (fichiers,processus,reseau,peripheriques)
+il'y'a deux modes d'utilisation:
+ Mode interactif : taper la commande au clavier et valider avec entree.(le shell interprete la commd immediatement)
+ Mode script : suite de commandes dans un fichier texte et lancer l'execution du fichier.(le shel execute auto le contenu ligne par ligne)
+
+Un Système d’Exploita.on (S.E.): est une machine abstraite conçue pour faciliter l’exploita.on du matériel (pilotes de
+périphériques) ou pour arbitrer l’accès au matériel par les u.lisateurs.
+
+Quels sont les points communs des systèmes Unix ?
+-il s'agit de systèmes d'exploita2on Mul2tâche et Mul2-u2lisateurs.
+Multitâche:
+-plusieurs programmes ou logiciels peuvent s’exécuter concurremment
+-le système, doit résister à tous les crashs des applica2ons.
+-un u2lisateur peut lancer plusieurs tâches simultanément.
+Multi-utilisateurs:
+-Conçu à l'origine pour des mainframes, il permet donc à de mul2ples
+u2lisateurs de travailler sur le même ordinateur.
+-plusieurs personnes peuvent partager les ressources de la même
+machine
+
+MS-DOS -> Windows
+
+    -> Mac OS
+Unix 
+    -> Linux ou (GNU/Linux)
+
+    «Au sens strict, Linux est le nom du noyau de système d'exploita;on libre,
+    mul;tâche, mul;plate-forme et mul;-u;lisateur de type UNIX créé par Linus
+    Torvalds, souvent désigné comme le noyau Linux.»
+
+    Linux n’est en réalité que le noyau du système d’exploita.on
+    GNU/Linux (GNU = GNU is Not Unix)
+
+-> Linux est un noyau
+-> GNU est un ensemble de programmes utilitaires
+-> GNU/Linux est le système d’exploitation
+
+Le système Unix est organisé en couches Noyau, Shell , Applications :
+Noyau : la couche de plus haut niveau, elle assure la communica2on
+avec le matériel.
+Shell : interprète les ordres de l’u.lisateur et les fait exécuter par
+le noyau. Les ordres peuvent être passés soit directement au clavier,
+soit en utolisant des ou.ls graphiques de plus haut niveau.
+Applications : interagissent avec l’u.lisateur ou avec d’autres
+applications et communiquent avec le shell ou avec le noyau
+
+En réalité, si on u-lise le noyau Linux seul, accompagné des ou-ls GNU de base : pas
+d'interface graphique, juste quelques commandes, votre système d'exploita-on serait
+inexploitable
+
+ fdisk : Affiche les partitions
+ df : Montre la capacité des systèmes de fichiers et leur point de montage
+ du rep : Montre la capacité du répertoire rep
+
+mkfs /dev/xxxxx  :( Make file system ) pour creer un systeme de fichier.
+mount /dev/xxxx /point_de_montage : monter un system de fichiers.
+unmount /dev/xxxx : demonter un systeme de fichiers.
+
+Connaître la syntaxe : nom_commde –help ou man nom_com
+Lister les fichier et les répertoires : ls
+Créer un répertoire : mkdir
+Connaître la position courante : pwd
+Changer la position courante : cd
+Copier un fichier ou un répertoire : cp
+Déplacer ou renommer un fichier ou un répertoire : mv
+Supprimer un fichier ou un répertoire : rm
+Visualiser (ou concaténer) le contenu d'un fichier texte : cat
+Trouver un fichier dans l'arborescence : find, locate
+ls -t : trier les fichiers selon la date de derniere Modification.
+ls -R : (Recursif) affiche le contenu des repertoire et sous repertoires.
+mkdir : pour creer un repertoire ou un sous repertoire.
+rmdir / rm -r : pour suprimer un repertoire
+chmod =r toto : positionne pour tout le monde le droit de lecture.
+cp fichier1 fichier2 : faire un doublet de fichier 1 en changent le nom
+cp -R rep1 rep2 : option pour les repertoires 
+cp fich1 fich2 fich3 rep3 : copie tout les fichier au repertoire rep3 
+mv : move ou renomme un fichier/repertoire
+rm : suprime un fichier.
+rm -f : force la supprimation Malgre les protection
+rm -rf : suppression recursive sans confirmation. 
+find -name fichier/repertoire : recherche les fichier/repertoire portant un nom 
+find -type d/p/f : recherches par type 
+grep : recherche une chaine de caracteres dans un ou plusieurs fichiers
+echo * : tous les fichiers sauf ceux qui commence par point
+echo *c : tous les fichiers dont le nom termine par c 
+echo .* : tous les fichiers commence par point .
+echo [0-9]*: tous les fichiers qui commence par un chiffre .
+
+les Meta-Caracteres : 
+? : remplace un seul caractere.
+; : separateure des commandes.
+[]: remplace un choisi parmi ceux enumeres entre crochets. 
+[a-Z]:les lettres 
+[Aa]: designe A ou a.  
+[!0-9]: sauf les chifres.
+[!a-Z]: sauf les lettres.
+
+\ : inhibe la signification du meta-caractere qui suit .
+'chaine' : permet une protection total de la chaine par metacaractere 
+"chaine" : interprete ce qui entre les guimets 
+
+{19,22} : prend les deux valeurs 19 et 22 .
+^ : designe un debut de ligne.
+$ : designe un fin de ligne.
+{nbre} : designe la repetition du caractere precedent.
+'^$' : une ligne vide.
+[A-Z][a-z]{9} : une ligne contenant au moins dix lettre successives, la première étant une majuscule, et les neuf autres étant des minuscules ;
+'^[A-Z]' : désigne une ligne commençant par une lettre majuscule.
+
+les editeurs plus connus : ed,emacs,vim,gedit,nano.
+
+;  : sépare les commandes
+&  : lance en tâche de fond
+|| : séparateur conditionnel, si échoue
+&& : séparateur conditionnel, si succès
+
+command1 ; command2 : execute command1 puis la command2
+command1 || command2 : execute command1, si le code de retour est mauvais il execute la command2  
+command1 && command2 : execute command1, si c'est bon alors il execute la command2.
+
+3 types de fichiers:
+ • fichiers ordinaires
+ • répertoires
+ • fichiers spéciaux
+
+ls -a :affiche tous les fichiers memes si les cache.
+
+L’indicateur du type de fichier peut prendre :
+ - : un fichier ordinaire
+ d : un répertoire
+ l : un lien symbolique
+ b : un fichier spécial de type bloc (périphériques …)
+ c : un fichier spécial de type caractère (périphériques …)
+ s : socket
+
+ Il suffit d’avoir le droit d’écrire (w) dans le répertoire père pour :
+  creer des fichiers/repertoires
+  deplacer les fichiers/repertoires
+
+du : affiche les infos sur l'occupation du disque.
+df -h : affiche l'espace libre et utilises d'un disque.
+cp -rf : copie recursive sans confirmation.
+ln fich1 fich2 : liens physiques + donne plusieurs nom a un fichier + pas pour les repertoires + sera detruit quand tous ses liens physiques sont suprimes.(ce n'est pas un raccourcis)
+ln -s fich1 fich2 : lien symbolique + raccourci + traverse les partitions + fonctionne pour les repertoires.
+ls -l fich1 : listes les liens d'un fichier.
+lien symbolique : En cas de déplacement du fichier cible, le lien symbolique peut devenir invalide
+
+tar cvf archive.tar fich1 fich2 fich3 : creer une archive contenant les fich1->3
+tar xvf archive.tar : recupere les fichiers contenus dans l'archive.
+ 
+alias a1='ls-l'
+unalias a1 : pour desactiver
+
+les types d'utilisateurs : user,group,others
+les types de permissions : r,w,x
+
+umask : permet de definir un masque de protection des fichiers/repertoires ci c'est (002) donc les droits par default sont 775
+
+r : autorise la lecture du contenu du répertoire, permet de voir la liste des fichiers (et
+sous-répertoires) contenu dans le répertoire. Permet de lister le contenu avec ls
+
+w : autorise la création, la suppression et le changement du nom d’un élément du
+répertoire. Cette permission est indépendante de l’accès aux fichiers du répertoire.
+
+x : autorise l’accès au répertoire ( à l’aide de la commande cd).
+
+les droit d'accès par default d'un fichier nouveau creer est : 666
+
+
+
+find /usr/include -iname "*color*.h" : recherche les fichiers contenant *color*.h
+find . -type f -user mil -group prof -print : recherche tous les fichiers ordinaires appartenant à mil et au groupe prof.
+find . -inum 63 -ok rm -f {} \;  :  Effacer, en demandant la confirmation, de tous les liens portant le numéro d’inode 63
+find / -mtime 3 -print : Recherche les derniers fichiers modifiés dans les 3 derniers jours dans toute l’arborescence (/)
+find / -type f -user mil -perm 755 -print : Chercher dans toute l’arborescence, les fichiers ordinaires
+appartenant à mil, dont la permission est fixée à 755
+
+commande > fichier : l’affichage sera écrit dans fichier et non à l’écran. Si fichier existe son ancien contenu est effacé.
+commande >> fichier : l’affichage sera écrit à la fin de fichier et non à l’écran.
+commande 2> fichier : redirige les erreurs générées lors de l’exécution de la commande.
+
+head -4 : afficher les premiers 4 lignes de fichier.
+tail -4 : afficher les dernier 4 lignes de fichier.
+wc -cmlw : affiche le nombre de (c:octet m:caracteres l:ligne w:mots)
+
+sed -e 's/ab/AB/’ : change le premier ab de chaque ligne en AB
+sed -e 's/ab/AB/3’ :  change le troisième ab de chaque ligne en AB
+sed -e 's/10/20/g’ :  change tous les 10 en 20
+sed -e '3,$s/0/1/g’: change tous les 0 en 1 à partir de la ligne 3
+
+diff fich1 fich2 : affiche les lignes différentes entres les fichiers.
+tr 'a' 'A' : change a par A 
+uniq fich1 : suprime les duplication et garde une.
+
+les droits normaux pour un fichier sont : 644 
+les droits normaux pour un repertoire sont : 750
+
+chown <user> <fichier> : le proprietaire de fichier devient user
+
+    Le prompt indique :
+    le nom de la machine
+    le nom d’utilisateur
+    les privilèges (super utilisateur : #, utilisateur : $)
+    la localisation dans le système de fichier
+   
+ps : affiche les infos sur les processus executes dans le systeme.
+
+une commande est un programme réalisant une tâche spécifique et pouvant être exécutée par un utilisateur
+
+Proccesus : un programme en cours d'execution. (espace memoire + contexte d'execution)
+
+Système multitâches : Plusieurs programmes en cours d’exécution partagent les mêmes ressources matériel (mémoire vive, CPU, disques, . . .). Ils peuvent provenir d’un seul ou de plusieurs utilisateurs,
+
+Système multi-utilisateur : Plusieurs utilisateurs partagent les mêmes ressources matériel (RAM, CPU, disques, . . .),
+
+
+La gestion des processus est réalisée par le système d’exploitation. C’est une de ses tâches principales. Pour cela il a besoin de pouvoir identifier chaque processus.
+
+PID - Process IDentifier : C’est un numéro unique attribué à chaque processus lors de son lancement
+PPID - Parent Process IDentifier : Le premier processus lancé porte le numéro de PID 1. Les processus suivants sont des processus issus de ce processus parent.
+Chaque processus possède un processus parent - Sauf le premier processus (systemd ou init, PID=1)
+
+Le CPU ne traite qu’un seul processus à la fois
+Le planificateur permet l’alternance d’accès au CPU en attribuant une priorité à chaque processus.
+Le planificateur gère le temps CPU attribué à chaque processus
+
+Caractéristiques d’un processus :
+ PID : un numéro d’identification
+ PPID : le PID du processus parent
+ utilisateur qui a lancé le processus sa priorité 
+ son état : R (running), S (sleeping), T (stopped),
+ place en mémoire, terminal, heure de lancement...
+
+
+
+
+
+
+
+

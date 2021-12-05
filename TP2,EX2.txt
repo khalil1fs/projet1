@@ -1,0 +1,78 @@
+package salam;
+import java.util.*;
+public class tp2ex2 {
+	private static class compte{
+		private int numero;
+		private char typeDeCompte;
+		private double solde;
+		private int codeSecret;
+		compte(){
+			numero=999999;
+			typeDeCompte=' ';
+			solde=0;
+			codeSecret=0;
+		}
+		int generateurDeCodeSecret() {
+			return (int)((9999-100)*Math.random()+100);
+		}
+		compte(int numero,char typeDeCompte,double solde){
+			this.numero=numero;
+			this.typeDeCompte=typeDeCompte=='D'||typeDeCompte=='E'? typeDeCompte:' ';
+			this.solde=solde;
+			codeSecret=generateurDeCodeSecret();
+		}
+		void setType(char typeDeCompte) {
+			this.typeDeCompte=typeDeCompte;
+		}
+		void setNumero(int numero) {
+			this.numero=numero;
+		}
+		int getNumero() {
+			return numero;
+		}
+		int getCodeSecret() {
+			return codeSecret;
+		}
+		double depot() {
+			int choise;
+			double somme;
+			System.out.println("Bonjour dans le banque populaire est ce que si tu veux retire une somme cliquez sur 1 si tu veux deposer cliquez sur 2");
+			do{
+				Scanner choix=new Scanner(System.in);
+			choise=choix.nextInt();}while(choise!=1 && choise!=2);
+			switch(choise) {
+			case 1:{
+				do{
+					System.out.println("donnerr la somme ");
+					Scanner choix=new Scanner(System.in);
+				somme=choix.nextDouble();}while(somme>solde || somme<0);
+				solde-=somme;
+			}break;
+			case 2:{
+				System.out.println("donnerr la somme ");
+				Scanner choix=new Scanner(System.in);
+				somme=choix.nextDouble();
+				solde+=somme;
+			}
+			}
+			return solde;
+		}
+		public String toString() {
+			return "Compte numero: " +this.numero+" type de Compte: "+this.typeDeCompte+" solde de ton compte est: "+solde+" DHS";
+		}
+	}
+	private static class Banque{
+		Map <compte,Integer> gere=new HashMap<compte,Integer>();
+		void ajoutezCompte(compte aAjoutez,int numero){
+			gere.put(aAjoutez,numero);
+		}
+		void supprimierCompte(int numero) {
+			gere.remove(numero);
+		}
+	}
+	 public static void main(String[] args) {
+		 compte comptebanque=new compte(100,'D',4000D);
+		 double solde=comptebanque.depot();
+		 System.out.println(comptebanque);
+	 }
+}

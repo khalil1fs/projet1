@@ -1,0 +1,72 @@
+import java.lang.Math;
+public class Point {
+    double a,b;
+    public Point(double x, double y) {
+        this.a=x;
+        this.b=y;
+    }
+    double dist(Point p ) {
+        double dist=0;
+        //dist=Math.sqrt(Math.pow(((p.a)-this.a,2)+Math.pow(((p.b)-this.b,2)));
+        return dist;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Point point = new Point(0,0);
+        Point pointdist = new Point(1,1);
+        System.out.println("la distance est :"+ point.dist(pointdist));
+        Point pointrect= new Point(0,0);
+        Rectangle rect = new Rectangle(pointrect,5,4);
+        System.out.println("l'aire est :"+ rect.aire());
+        Point pointtran = new Point(0,0);
+        rect.translate(pointtran);
+        Point pointcont = new Point(1,1);
+        System.out.println(rect.contient(pointcont));
+        Point pointcontrect = new Point(1,1);
+        Point z = new Point(0,0);
+        Point k = new Point(0,0);
+        Rectangle rectcont=new Rectangle(pointcontrect,2,1);
+        System.out.println(rect.contientRect(rectcont,z,k));
+        Point pointegaux = new Point(0,0);
+        Rectangle rectegaux=new Rectangle(pointegaux,5,4);
+        System.out.println(rect.egaux(rectegaux));
+    }
+
+}
+public class Rectangle {
+    Point g;
+    double lo,la;
+    public Rectangle(Point p,double l,double w) {
+        this.g=p;
+        this.lo=l;
+        this.la=w;
+    }
+    double aire() {
+        return lo*la;
+    }
+    void translate(Point p) {
+        this.g.a+=p.a;
+        this.g.b+=p.b;
+    }
+    boolean contient(Point p) {
+        if(p.a>this.g.a&&p.a<(this.g.a)+this.lo&&p.b>this.g.b&&p.b>(this.g.b)+this.la)
+            return true;
+        return false;
+    }
+    boolean contientRect(Rectangle r,Point z,Point k) {
+        z.a=r.g.a+r.lo;
+        z.b=r.g.b;
+        k.a=r.g.a;
+        k.b=r.g.b+r.la;
+        if(contient(r.g)&&contient(z)&&contient(k))
+            return true;
+        return false;
+    }
+    boolean egaux(Rectangle r) {
+        if(r.g.a==this.g.a&&r.g.b==this.g.b&&r.lo==this.lo&&r.la==this.la)
+            return true;
+        return false;
+    }
+
+}

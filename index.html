@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script language="JavaScript">
+
+    document.cookie = "name= khalil; age=22;";     
+    var i = prompt("Entrer un variable : ");                    // pour entrer des variables    
+    var j = prompt("Entrer un autre variable: ");
+     var result = parseFloat(i)+parseFloat(j);             
+     alert("la somme est : "+result);                           /// pour ouvrir une petit prompt
+     document.write("le resultat est "+result);                 /// pour afficher dans la page
+     confirm("vous voulez vraiment sortir de cette page:(");    ///    pour confirmer      
+     tableau = new Array[10];                                   /// pour declarer un Tableau de 10 elements
+     var rand = Math.floor((Math.random()*5)+5);                /// pour obtenir un random entre 5 et 9 
+     var s = navigator.appName                                  /// pour detecter le navigateur de l'utilisateur
+             /// A ? B : C    C'est equivalent a if(A) {B}  else {C} 
+    document.getElementById("p1").style.color = "blue";         /// pour changer le style d'un element 
+    document.getElementById("p2").className = "maClassCSS";     /// pour changer la classe css d'un element 
+    getElementById("id");   /// Recupere l'element par son ID 
+    getElementByClass("class"); /// Recupere l'element par son classe 
+    getElementByTagName("balise"); /// Recupere tous les elements portant le nom de balise 
+    parseInt("1A6E",16); /// convertit 1A6E dans l'exadecimal en entier 
+    /// « == » vérifie uniquement l’égalité des valeurs tandis que « === » est un test d’égalité plus strict et renvoie FALSE si la valeur ou le type des deux variables sont différents.
+    var u = navigator.platform  /// detecte le systeme d'exploitation utiliser sur la Machine clients 
+    /// la valeur NULL est utilisee pour presenter aucune valeur ou aucun objet 
+    /*
+    var person = {name:"khalil", age:25};
+    delete person.name;     // pour suprimer la propriete ainsi que sa valeur 
+    */      
+    // Framework JavaScript : AngularJS , ReactJS , VueJS 
+    var somme = function(a, b) {return a+b};  //fonction anonyme 
+    setTimeout(function() { alert("Fuck The world ");},5000);  // affiche l'alert apres 5 seconde 
+    /* Toutes les variables en Js sont de types Object  */
+    /* Les cookies sont de petits fichiers stockés dans un ordinateur
+     et ils sont créés lorsque l’utilisateur visite un site Web pour stocker les informations dont il a besoin.
+     Par exemple, les informations d’un utilisateur, les informations d’une achat, etc. */
+    document.write("\"");                        ///  '\' : caractere d'echapement le code affiche "
+    escape("Hello World!");   // -> Hello%20World%21 
+    unescape("Hello%20World%21"); // Hello World!
+    // Window: est un objet global qui contient des variables, functions, history, location, etc.
+    // Document: se trouve exactement sous window et peut être considéré comme une propriété de window.
+    myArray = []; // pour vider un tableau 
+    myArray.length = 0; // aussi pour vider un tableau
+    var MonVariable = new Number();  // declarer un variable de type number
+    const A=10; // constante ne change pas 
+    
+</script>
+</body>
+</html>
